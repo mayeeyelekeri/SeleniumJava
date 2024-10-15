@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mine.seleniumjava.heroku.FormAuthenticationTest">
+      <class name="com.mine.magento.CreateNewAccount">
         <methods>
-          <include name="checkboxesTest"/>
           <include name="afterTest"/>
+          <include name="createNewAccount"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.mine.seleniumjava.heroku.FormAuthenticationTest -->
+      </class> <!-- com.mine.magento.CreateNewAccount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
