@@ -57,6 +57,15 @@ public class HerokuMainPageTest {
         assertEquals(checkboxlink, driver.getCurrentUrl());
 	}
 	
+	@Test
+	public void integerCheckTest() {
+		System.out.println("inside HerokuMainPageTest::integerCheckTest()");
+		assertEquals(1,1);
+		if (128 == 128) {
+			System.out.println(1 == 1);
+			assertEquals(128,128); 
+		}
+	}
 	
 	@BeforeTest
 	public void beforeTest() {
