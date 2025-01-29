@@ -1,0 +1,10 @@
+Chrome version was downloaded from this location:
+https://developer.chrome.com/docs/chromedriver/downloads/version-selection
+
+https://googlechromelabs.github.io/chrome-for-testing/
+
+- Specific version can be downloaded from here, just update the version number to anything specific 
+https://storage.googleapis.com/chrome-for-testing-public/<VERSION>/linux64/chromedriver-linux64.zip
+
+https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/linux64/chromedriver-linux64.zip
+https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/win64/chromedriver-win64.zip
