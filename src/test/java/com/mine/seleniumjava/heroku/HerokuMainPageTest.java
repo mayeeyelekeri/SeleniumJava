@@ -21,8 +21,8 @@ public class HerokuMainPageTest {
 	SetupMainPage mainPage; 
 	WebDriver driver; 
 	
-	@Parameters("titleExpected")
 	@Test
+	@Parameters("titleExpected")
 	public void titleTest(String titleExpected) {
 		System.out.println("inside HerokuMainPageTest::titleTest()");
 		mainPage.gotoMainPage(); 
