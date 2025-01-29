@@ -9,8 +9,7 @@ public class LoadProperties {
 	static LoadProperties instance; 
 	private static final Object lock = new Object();
 	static Properties prop = new Properties();
-	private static String propertyFilePath = System.getProperty("user.dir") +
-            "\\src\\test\\resources\\config.properties";
+	private static String propertyFilePath = System.getProperty("user.dir") + "/config.properties"; 
 	 
 	public static String mainURL; 
 	public static String driverPath; 
