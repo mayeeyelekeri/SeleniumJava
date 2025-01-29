@@ -14,6 +14,7 @@ public class LoadProperties {
 	 
 	public static String mainURL; 
 	public static String driverPath; 
+	public static String runMode; 
 	
 	//Create a Singleton instance. We need only one instance of Property Manager.
     public static LoadProperties getInstance () {
@@ -40,6 +41,7 @@ public class LoadProperties {
         //Get properties from configuration.properties
         mainURL = prop.getProperty("mainURL");
         driverPath = prop.getProperty("driverPath");
+        runMode = prop.getProperty("runMode"); 
     }
 
 	public String getMainURL() {
@@ -50,4 +52,7 @@ public class LoadProperties {
 		return driverPath;
 	}
     
+	public String getRunMode() {
+		return runMode;
+	}
 }
