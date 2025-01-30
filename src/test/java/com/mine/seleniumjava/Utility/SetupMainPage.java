@@ -35,7 +35,7 @@ public class SetupMainPage {
 				options.setCapability("browserVersion", "132.0");
 				options.setCapability("platformName", "linux"); 
 				options.setCapability("browserName", "chrome"); 
-				
+								
 				try { 
 					driver = new RemoteWebDriver(new URL(gridHost), options);
 				} catch (Exception e) { 
