@@ -61,7 +61,12 @@ public class FormAuthenticationTest {
 		System.out.println("...... inside FormAuthenticationTest::afterTest()");
 		// Wait for 2 seconds before closing 
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		driver.close();
+		
+		if (mainPage.getRunMode().equals("grid")) {
+			driver.quit();
+		} else { 
+			driver.close();
+		}
 	}
 
 }

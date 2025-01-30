@@ -13,6 +13,8 @@ public class LoadProperties {
 	 
 	public static String mainURL; 
 	public static String driverPath; 
+	public static String headless; 
+	public static String gridHost; 
 	public static String runMode; 
 	
 	//Create a Singleton instance. We need only one instance of Property Manager.
@@ -40,6 +42,8 @@ public class LoadProperties {
         //Get properties from configuration.properties
         mainURL = prop.getProperty("mainURL");
         driverPath = prop.getProperty("driverPath");
+        headless = prop.getProperty("headless");
+        gridHost = prop.getProperty("gridHost"); 
         runMode = prop.getProperty("runMode"); 
     }
 
@@ -51,6 +55,14 @@ public class LoadProperties {
 		return driverPath;
 	}
     
+	public String getHeadless() {
+		return headless;
+	}
+	
+	public String getGridHost() {
+		return gridHost;
+	}
+	
 	public String getRunMode() {
 		return runMode;
 	}

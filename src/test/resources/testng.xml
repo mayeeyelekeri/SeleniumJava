@@ -19,5 +19,5 @@
       <class name="com.mine.seleniumjava.heroku.FormAuthenticationTest"/>
     </classes>
   </test> 
-  
+   
 </suite> 

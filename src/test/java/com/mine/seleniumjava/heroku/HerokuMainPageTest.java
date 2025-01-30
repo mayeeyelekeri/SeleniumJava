@@ -33,6 +33,7 @@ public class HerokuMainPageTest {
         assertEquals(titleExpected, actualTitle);
 	}
 	  
+	
 	@Parameters("ablink")
 	@Test
 	public void abTest(String ablink) {
@@ -44,7 +45,7 @@ public class HerokuMainPageTest {
         element.click();
         assertEquals(ablink, driver.getCurrentUrl());
 	}
-	
+	 
 	@Parameters("checkboxlink")
 	@Test
 	public void checkboxesTest(String checkboxlink) {
@@ -67,6 +68,7 @@ public class HerokuMainPageTest {
 		}
 	}
 	
+	
 	@BeforeTest
 	public void beforeTest() {
 		System.out.println("inside HerokuMainPageTest::beforeTest() ...... ");
@@ -79,7 +81,10 @@ public class HerokuMainPageTest {
 		System.out.println("...... inside HerokuMainPageTest::afterTest()");
 		// Wait for 2 seconds before closing 
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		driver.close();
-	}
-
+		if (mainPage.getRunMode().equals("grid")) {
+			driver.quit();
+		} else { 
+			driver.close();
+		}
+	} 
 }
