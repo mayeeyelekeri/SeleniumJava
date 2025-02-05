@@ -28,6 +28,7 @@ public class SetupMainPageFirefox {
 			
 			// Run in background 
 			FirefoxOptions options = new FirefoxOptions(); 
+			options.setBinary("/opt/firefox/firefox"); 
 			if (headless.equals("true")) { 
 				options.addArguments("headless"); 
 			}
