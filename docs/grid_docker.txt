@@ -1,0 +1,20 @@
+Reference: https://hub.docker.com/r/selenium/node-chrome
+
+- How to run this image
+The Hub and Nodes will be created in the same network and they will recognize each other by their container name. A Docker network⁠ needs to be created as a first step.
+
+- Create a Docker Network
+docker network create grid
+
+- Start the Hub using the created network
+docker run -d -p 4442-4444:4442-4444 --net grid --name selenium-hub selenium/hub:latest
+
+- Start the Node using the created network
+docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub \
+    --shm-size="2g" \
+    -e SE_EVENT_BUS_PUBLISH_PORT=4442 \
+    -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 \
+    selenium/node-chrome:latest
+
+
+Point your WebDriver tests to http://localhost:4444⁠

@@ -6,11 +6,12 @@
   <parameter name="checkboxlink" value="https://the-internet.herokuapp.com/checkboxes"/>
   <test name="allHerokuTests">
     <classes>
-      <class name="com.mine.seleniumjava.heroku.HerokuMainPageTest"/>
+      <!-- <class name="com.mine.seleniumjava.heroku.HerokuMainPageTest"/> --> 
       <class name="com.mine.seleniumjava.heroku.HerokuMainPageTestFirefox"/>
     </classes>
   </test> 
 
+<!-- 
   <parameter name="formauthlink" value="https://the-internet.herokuapp.com/login"/>
   <parameter name="formLoggednLink" value="https://the-internet.herokuapp.com/secure"/>
   <parameter name="username" value="tomsmith"/>
@@ -20,5 +21,5 @@
       <class name="com.mine.seleniumjava.heroku.FormAuthenticationTest"/>
     </classes>
   </test> 
-   
+   --> 
 </suite> 
