@@ -30,9 +30,12 @@ public class SetupMainPage {
 				options.addArguments("headless"); 
 			}
 			
+			//options.AddArgument("--user-data-dir=/tmp/1"); 
+			//options.AddArgument("--profile-directory=Default"); 
+			//options.AddArgument("--disable-extensions"); 
 			if (runMode.equals("grid")) { 
 				// hub setup 
-				options.setCapability("browserVersion", "132.0");
+				options.setCapability("browserVersion", "131.0");
 				options.setCapability("platformName", "linux"); 
 				options.setCapability("browserName", "chrome"); 
 								
