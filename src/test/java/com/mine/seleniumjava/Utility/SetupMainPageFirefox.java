@@ -34,9 +34,9 @@ public class SetupMainPageFirefox {
 			
 			if (runMode.equals("grid")) { 
 				// hub setup 
-				options.setCapability("browserVersion", "132.0");
+				//options.setCapability("browserVersion", "132.0");
 				options.setCapability("platformName", "linux"); 
-				options.setCapability("browserName", "chrome"); 
+				options.setCapability("browserName", "firefox"); 
 								
 				try { 
 					driver = new RemoteWebDriver(new URL(gridHost), options);
