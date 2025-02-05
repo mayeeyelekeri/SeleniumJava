@@ -1,3 +1,4 @@
+--------- CHROME ----------------- 
 Chrome version was downloaded from this location:
 https://developer.chrome.com/docs/chromedriver/downloads/version-selection
 
@@ -8,3 +9,24 @@ https://storage.googleapis.com/chrome-for-testing-public/<VERSION>/linux64/chrom
 
 https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/linux64/chromedriver-linux64.zip
 https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/win64/chromedriver-win64.zip
+
+--------- FIREFOX -----------------
+- Install firefox on Linux 
+https://askubuntu.com/questions/1491840/how-do-i-install-firefox-on-ubuntu-server-22-04-jammy-offline
+
+Different versions can be accessed from here: 
+https://archive.mozilla.org/pub/firefox/releases/ 
+
+wget https://archive.mozilla.org/pub/firefox/releases/135.0/linux-x86_64/en-US/firefox-135.0.tar.xz
+unzip ../firefox-135.0.tar.xz
+tar xvf ../firefox-135.0.tar.xz
+sudo mv firefox/ /opt
+sudo ln -s /opt/firefox/firefox /usr/bin/firefox
+firefox --version
+
+- Download geckodriver 
+https://github.com/mozilla/geckodriver/releases 
+
+wget https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux64.tar.gz 
+
+
