@@ -24,6 +24,8 @@ public class SetupMainPageFirefox {
 			gridHost = LoadProperties.getInstance().getGridHost();
 			runMode = LoadProperties.getInstance().getRunMode();
 			
+			System.setProperty("weddriver.firefox.driver", driverPath); 
+			
 			// Run in background 
 			FirefoxOptions options = new FirefoxOptions(); 
 			if (headless.equals("true")) { 
