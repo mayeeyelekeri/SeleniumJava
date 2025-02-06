@@ -24,11 +24,11 @@ public class SetupMainPageFirefox {
 			gridHost = LoadProperties.getInstance().getGridHost();
 			runMode = LoadProperties.getInstance().getRunMode();
 			
-			System.setProperty("weddriver.firefox.driver", driverPath); 
+			System.setProperty("weddriver.gecko.driver", driverPath); 
 			
 			// Run in background 
 			FirefoxOptions options = new FirefoxOptions(); 
-			options.setBinary("/opt/firefox/firefox"); 
+			//options.setBinary("/opt/firefox/firefox"); 
 			if (headless.equals("true")) { 
 				options.addArguments("headless"); 
 			}
@@ -42,7 +42,7 @@ public class SetupMainPageFirefox {
 				try { 
 					driver = new RemoteWebDriver(new URL(gridHost), options);
 				} catch (Exception e) { 
-					System.out.println("caught exception " + e);
+					System.out.println("ERRRRRRRROR: caught exception " + e);
 				}
 			} else {
 				driver = new FirefoxDriver(options);

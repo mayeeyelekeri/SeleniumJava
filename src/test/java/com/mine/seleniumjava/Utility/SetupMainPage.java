@@ -24,8 +24,10 @@ public class SetupMainPage {
 			gridHost = LoadProperties.getInstance().getGridHost();
 			runMode = LoadProperties.getInstance().getRunMode();
 			
+			//System.setProperty("weddriver.chrome.driver", "/home/vagrant/INFO/SeleniumJava/drivers/chromedriver");
 			// Run in background 
 			ChromeOptions options = new ChromeOptions(); 
+			//options.setBinary("/opt/google/chrome/chrome");
 			if (headless.equals("true")) { 
 				options.addArguments("headless"); 
 			}
@@ -35,14 +37,14 @@ public class SetupMainPage {
 			//options.AddArgument("--disable-extensions"); 
 			if (runMode.equals("grid")) { 
 				// hub setup 
-				options.setCapability("browserVersion", "131.0");
+				//options.setCapability("browserVersion", "131.0");
 				options.setCapability("platformName", "linux"); 
 				options.setCapability("browserName", "chrome"); 
 								
 				try { 
 					driver = new RemoteWebDriver(new URL(gridHost), options);
 				} catch (Exception e) { 
-					System.out.println("caught exception " + e);
+					System.out.println("ERRRRRRRRR for chrome: caught exception " + e);
 				}
 			} else {
 				driver = new ChromeDriver(options);
