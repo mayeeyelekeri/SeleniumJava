@@ -1,6 +1,8 @@
 package com.mine.seleniumjava.Utility;
 
 import java.net.URL;
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -24,11 +26,13 @@ public class SetupMainPageFirefox {
 			gridHost = LoadProperties.getInstance().getGridHost();
 			runMode = LoadProperties.getInstance().getRunMode();
 			
-			System.setProperty("weddriver.gecko.driver", driverPath); 
+			System.setProperty("weddriver.firefox.driver", driverPath); 
 			
 			// Run in background 
 			FirefoxOptions options = new FirefoxOptions(); 
-			//options.setBinary("/opt/firefox/firefox"); 
+			options.setBinary("/opt/firefox/firefox"); 
+			
+			// options.setPageLoadTimeout(new Duration(3000); 
 			if (headless.equals("true")) { 
 				options.addArguments("headless"); 
 			}
@@ -41,8 +45,9 @@ public class SetupMainPageFirefox {
 								
 				try { 
 					driver = new RemoteWebDriver(new URL(gridHost), options);
+					driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS); 
 				} catch (Exception e) { 
-					System.out.println("ERRRRRRRROR: caught exception " + e);
+					System.out.println("ERRRRRRRROR for Firefox: caught exception " + e);
 				}
 			} else {
 				driver = new FirefoxDriver(options);
