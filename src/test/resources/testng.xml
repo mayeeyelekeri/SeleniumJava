@@ -7,7 +7,7 @@
   <test name="allHerokuTests">
     <classes>
       <class name="com.mine.seleniumjava.heroku.HerokuMainPageTest"/>
-      <!-- <class name="com.mine.seleniumjava.heroku.HerokuMainPageTestFirefox"/> -->
+      <class name="com.mine.seleniumjava.heroku.HerokuMainPageTestFirefox"/>
     </classes>
   </test> 
 

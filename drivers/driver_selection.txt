@@ -11,6 +11,9 @@ https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/linux64/
 https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/win64/chromedriver-win64.zip
 
 --------- FIREFOX -----------------
+Version compatability information is here: 
+https://firefox-source-docs.mozilla.org/testing/geckodriver/Support.html
+
 - Install firefox on Linux 
 https://askubuntu.com/questions/1491840/how-do-i-install-firefox-on-ubuntu-server-22-04-jammy-offline
 
