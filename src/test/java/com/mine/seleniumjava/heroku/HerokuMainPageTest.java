@@ -1,6 +1,7 @@
 package com.mine.seleniumjava.heroku;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Ignore;
 
 import com.mine.seleniumjava.Utility.SetupMainPage;
 
@@ -69,6 +70,16 @@ public class HerokuMainPageTest {
 	}
 	
 	
+	@Test
+	public void dummyTest() {
+		System.out.println("inside Dummy Test"); 
+	}
+
+	@Test @Ignore
+	public void dummyTest2() {
+		System.out.println("inside skipped Test"); 
+	}
+
 	@BeforeTest
 	public void beforeTest() {
 		System.out.println("inside HerokuMainPageTest::beforeTest() ...... ");
