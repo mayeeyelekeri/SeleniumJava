@@ -80,7 +80,7 @@ public class HerokuMainPageTest {
 	public void afterTest() {
 		System.out.println("...... inside HerokuMainPageTest::afterTest()");
 		// Wait for 2 seconds before closing 
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		if (mainPage.getRunMode().equals("grid")) {
 			driver.quit();
 		} else { 

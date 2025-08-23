@@ -10,6 +10,8 @@ https://storage.googleapis.com/chrome-for-testing-public/<VERSION>/linux64/chrom
 https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/linux64/chromedriver-linux64.zip
 https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.159/win64/chromedriver-win64.zip
 
+Current version - 139.0.7258.139 (Official Build) (64-bit)
+
 --------- FIREFOX -----------------
 Version compatability information is here: 
 https://firefox-source-docs.mozilla.org/testing/geckodriver/Support.html
