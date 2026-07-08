@@ -8,11 +8,14 @@ import org.testng.annotations.Parameters;
 
 import static org.testng.Assert.assertEquals;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 
 public class FormAuthenticationTest {
@@ -38,6 +41,9 @@ public class FormAuthenticationTest {
         // click "login" button 
         driver.findElement(By.className("radius")).click();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/logout']")));
         
         // verify the login 
         System.out.println( "inside abTest, Current URL: "+ driver.getCurrentUrl()); 
