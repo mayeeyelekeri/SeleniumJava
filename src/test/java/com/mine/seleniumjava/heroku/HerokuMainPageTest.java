@@ -92,10 +92,19 @@ public class HerokuMainPageTest {
 		System.out.println("...... inside HerokuMainPageTest::afterTest()");
 		// Wait for 2 seconds before closing 
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		if (mainPage.getRunMode().equals("grid")) {
-			driver.quit();
-		} else { 
-			driver.close();
+		
+		try {
+			System.out.println("inside try");
+			if (mainPage.getRunMode().equals("grid")) {
+				System.out.println("inside quit");
+				driver.quit();
+			} else { 
+				System.out.println("inside close, driver is " + driver);
+				driver.quit(); 
+				System.out.println("close never happned");
+			}
+		} catch (Exception e) { 
+			System.out.println("Exception thrown while closing " + e); 
 		}
 	} 
 }

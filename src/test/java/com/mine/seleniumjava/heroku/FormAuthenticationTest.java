@@ -51,7 +51,7 @@ public class FormAuthenticationTest {
 	
 	@BeforeTest
 	public void beforeTest() {
-		System.out.println("inside FormAuthenticationTest::beforeTest() ...... ");
+		System.out.println(" its here inside FormAuthenticationTest::beforeTest() ...... ");
 		mainPage = new SetupMainPage(); 
 		driver = mainPage.getDriver(); 
 	}
@@ -65,7 +65,7 @@ public class FormAuthenticationTest {
 		if (mainPage.getRunMode().equals("grid")) {
 			driver.quit();
 		} else { 
-			driver.close();
+			driver.quit();
 		}
 	}
 

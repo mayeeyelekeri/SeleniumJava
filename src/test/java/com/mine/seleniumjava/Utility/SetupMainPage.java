@@ -17,12 +17,19 @@ public class SetupMainPage {
 		String runMode; 
 		
 		public SetupMainPage() {
+			System.out.println("inside Setupmainpage()");
+			//System.out.println("driver path :"+ driverPath);
+			
 			// get values from properties file 
 			mainURL = LoadProperties.getInstance().getMainURL();
 			driverPath = LoadProperties.getInstance().getDriverPath();
 			headless = LoadProperties.getInstance().getHeadless();
 			gridHost = LoadProperties.getInstance().getGridHost();
 			runMode = LoadProperties.getInstance().getRunMode();
+			
+			System.out.println("driver :"+ driver);
+			System.out.println("driver path :"+ driverPath);
+			
 			
 			//System.setProperty("weddriver.chrome.driver", "/home/vagrant/INFO/SeleniumJava/drivers/chromedriver");
 			// Run in background 
@@ -43,11 +50,17 @@ public class SetupMainPage {
 								
 				try { 
 					driver = new RemoteWebDriver(new URL(gridHost), options);
+					System.out.println("after setting, driver :"+ driver);
+					System.out.println("driver path :"+ driverPath);
+					
 				} catch (Exception e) { 
 					System.out.println("ERRRRRRRRR for chrome: caught exception " + e);
 				}
 			} else {
+				
 				driver = new ChromeDriver(options);
+				System.out.println("after setting ... driver :"+ driver);
+				System.out.println("driver path :"+ driverPath);
 			}
 			 
 			driver.get(mainURL);
@@ -62,6 +75,9 @@ public class SetupMainPage {
 			headless = LoadProperties.getInstance().getHeadless();
 			gridHost = LoadProperties.getInstance().getGridHost();
 			runMode = LoadProperties.getInstance().getRunMode();
+			
+			System.out.println("driver :"+ driver);
+			System.out.println("driver path :"+ driverPath);
 			
 			// Run in background 
 			ChromeOptions options = new ChromeOptions(); 

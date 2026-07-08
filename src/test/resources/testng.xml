@@ -8,11 +8,11 @@
     <classes>
       <class name="com.mine.seleniumjava.heroku.HerokuMainPageTest"/>
       <!-- <class name="com.mine.seleniumjava.heroku.HerokuMainPageTestFirefox"/>
-      -->
+      --> 
     </classes>
   </test> 
 
- 
+  
   <parameter name="formauthlink" value="https://the-internet.herokuapp.com/login"/>
   <parameter name="formLoggednLink" value="https://the-internet.herokuapp.com/secure"/>
   <parameter name="username" value="tomsmith"/>
