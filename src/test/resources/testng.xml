@@ -23,4 +23,9 @@
     </classes>
   </test> 
    
+  <test name="gridTests">
+    <classes>
+      <class name="com.mine.seleniumjava.heroku.GridTest"/>
+    </classes>
+  </test> 
 </suite> 
