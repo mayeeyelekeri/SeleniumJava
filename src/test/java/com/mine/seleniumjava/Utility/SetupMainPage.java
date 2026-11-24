@@ -7,9 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import com.epam.healenium.SelfHealingDriver;
+
 public class SetupMainPage {
 
-		WebDriver driver; 
+		WebDriver delegate; 
+		SelfHealingDriver driver; 
 		String mainURL; 
 		String driverPath; 
 		String headless; 
@@ -49,7 +52,8 @@ public class SetupMainPage {
 				options.setCapability("browserName", "chrome"); 
 								
 				try { 
-					driver = new RemoteWebDriver(new URL(gridHost), options);
+					delegate = new RemoteWebDriver(new URL(gridHost), options);
+					driver = SelfHealingDriver.create(delegate); 
 					System.out.println("after setting, driver :"+ driver);
 					System.out.println("driver path :"+ driverPath);
 					
@@ -58,7 +62,8 @@ public class SetupMainPage {
 				}
 			} else {
 				
-				driver = new ChromeDriver(options);
+				delegate = new ChromeDriver(options);
+				driver = SelfHealingDriver.create(delegate); 
 				System.out.println("after setting ... driver :"+ driver);
 				System.out.println("driver path :"+ driverPath);
 			}
@@ -92,12 +97,14 @@ public class SetupMainPage {
 				options.setCapability("browserName", "chrome"); 
 								
 				try { 
-					driver = new RemoteWebDriver(new URL(gridHost), options);
+					delegate = new RemoteWebDriver(new URL(gridHost), options);
+					driver = SelfHealingDriver.create(delegate); 
 				} catch (Exception e) { 
 					System.out.println("caught exception " + e);
 				}
 			} else {
-				driver = new ChromeDriver(options);
+				delegate = new ChromeDriver(options);
+				driver = SelfHealingDriver.create(delegate); 
 			}
 			 
 			driver.get(mainURL);
@@ -107,7 +114,8 @@ public class SetupMainPage {
 		public WebDriver gotoMainPage() { 
 			// make sure driver is setup
 			if (driver == null) {
-				driver = new ChromeDriver();
+				delegate = new ChromeDriver();
+				driver = SelfHealingDriver.create(delegate); 
 				driver.manage().window().maximize();
 			}
 			
